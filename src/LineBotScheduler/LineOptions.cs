@@ -1,4 +1,4 @@
-namespace LineReminder
+namespace LineBotScheduler
 {
     public class LineOptions
     {
