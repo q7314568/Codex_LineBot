@@ -11,6 +11,7 @@ using Quartz;
 using LineBotScheduler;
 
 var builder = Host.CreateDefaultBuilder(args)
+    .UseContentRoot(AppContext.BaseDirectory)
     .ConfigureServices((context, services) =>
     {
         services.Configure<LineOptions>(context.Configuration.GetSection("Line"));
