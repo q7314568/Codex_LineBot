@@ -3,7 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Quartz;
-using LineReminder;
+using LineBotScheduler;
 
 var builder = Host.CreateDefaultBuilder(args)
     .ConfigureServices((context, services) =>
