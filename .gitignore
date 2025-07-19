@@ -1,2 +1,24 @@
-src/LineBotScheduler/bin/
-src/LineBotScheduler/obj/
+# Build artifacts
+bin/
+obj/
+**/bin/
+**/obj/
+
+# Visual Studio directories and user files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.rsuser
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+
+# Database and debug files
+*.pdb
+
+# Rider or ReSharper settings
+*.DotSettings.user
