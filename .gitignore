@@ -1,2 +1,24 @@
-src/LineBotScheduler/bin/
-src/LineBotScheduler/obj/
+# 建置產物
+bin/
+obj/
+**/bin/
+**/obj/
+
+# Visual Studio 相關目錄與使用者檔
+.vs/
+*.user
+*.suo
+*.userosscache
+*.rsuser
+
+# 日誌檔案
+*.log
+
+# 暫存檔案
+*.tmp
+
+# 資料庫或除錯檔案
+*.pdb
+
+# Rider 或 ReSharper 設定檔
+*.DotSettings.user
