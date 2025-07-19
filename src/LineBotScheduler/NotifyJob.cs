@@ -7,7 +7,7 @@ using Quartz;
 namespace LineBotScheduler
 {
     /// <summary>
-    /// Quartz job that sends a text message to the configured LINE group.
+    /// Quartz 工作，負責向設定的 LINE 群組傳送文字訊息。
     /// </summary>
     public class NotifyJob : IJob
     {
@@ -15,7 +15,7 @@ namespace LineBotScheduler
         private readonly LineOptions _options;
 
         /// <summary>
-        /// Initializes a new instance of <see cref="NotifyJob"/>.
+        /// 建立 <see cref="NotifyJob"/> 的新實例。
         /// </summary>
         public NotifyJob(IHttpClientFactory httpClientFactory, IOptions<LineOptions> options)
         {
@@ -24,12 +24,12 @@ namespace LineBotScheduler
         }
 
         /// <summary>
-        /// Sends the message provided in the job data to the LINE API.
+        /// 將 JobData 中的訊息送至 LINE API。
         /// </summary>
         public async Task Execute(IJobExecutionContext context)
         {
             var message = context.MergedJobDataMap.GetString("message") ?? string.Empty;
-            // Prepare HTTP request to LINE Push API
+            // 準備呼叫 LINE Push API 的 HTTP 請求
             using var client = _httpClientFactory.CreateClient();
             var request = new HttpRequestMessage(HttpMethod.Post, "https://api.line.me/v2/bot/message/push");
             request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", _options.ChannelAccessToken);
@@ -43,7 +43,7 @@ namespace LineBotScheduler
             };
             request.Content = new StringContent(JsonSerializer.Serialize(payload), Encoding.UTF8, "application/json");
             var response = await client.SendAsync(request);
-            // Log an error if the push message fails
+            // 若推播失敗則記錄錯誤
             if (!response.IsSuccessStatusCode)
             {
                 Console.WriteLine($"Failed to send message: {response.StatusCode}");

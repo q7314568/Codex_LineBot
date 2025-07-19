@@ -1,24 +1,24 @@
-# Build artifacts
+# 建置產物
 bin/
 obj/
 **/bin/
 **/obj/
 
-# Visual Studio directories and user files
+# Visual Studio 相關目錄與使用者檔
 .vs/
 *.user
 *.suo
 *.userosscache
 *.rsuser
 
-# Logs
+# 日誌檔案
 *.log
 
-# Temporary files
+# 暫存檔案
 *.tmp
 
-# Database and debug files
+# 資料庫或除錯檔案
 *.pdb
 
-# Rider or ReSharper settings
+# Rider 或 ReSharper 設定檔
 *.DotSettings.user

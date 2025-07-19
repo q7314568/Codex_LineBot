@@ -1,17 +1,17 @@
 namespace LineBotScheduler
 {
     /// <summary>
-    /// Configuration options for connecting to the LINE Messaging API.
+    /// 連線至 LINE Messaging API 的設定項目。
     /// </summary>
     public class LineOptions
     {
         /// <summary>
-        /// Channel access token issued by LINE Developers.
+        /// 從 LINE Developers 取得的 Channel Access Token。
         /// </summary>
         public string ChannelAccessToken { get; set; } = string.Empty;
 
         /// <summary>
-        /// Target group ID to which notifications should be sent.
+        /// 接收推播訊息的群組 ID。
         /// </summary>
         public string GroupId { get; set; } = string.Empty;
     }
